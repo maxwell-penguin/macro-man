@@ -1,0 +1,14 @@
+# Mobile (XcodeGen-generated, regenerate with `xcodegen generate`)
+apps/mobile/*.xcodeproj
+apps/mobile/*.xcworkspace
+DerivedData/
+*.xcuserstate
+
+# API
+apps/api/.venv/
+apps/api/__pycache__/
+apps/api/**/__pycache__/
+apps/api/.env
+
+# macOS
+.DS_Store
