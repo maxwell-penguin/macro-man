@@ -63,8 +63,8 @@ weight_logs(id, user_id, date, weight_kg)
 
 ## Development phases
 
-- **Phase 0 — Scaffold** *(current)*: monorepo, FastAPI skeleton with `/health`, Postgres + Redis via docker-compose, SwiftUI skeleton with stub TabView (Camera, Diary, Exercise, Dashboard, Profile), XcodeGen-generated project builds and runs on simulator, app can hit `/health` over localhost. No business logic yet.
-- **Phase 1 — Manual core loop**: manual meal entry, manual exercise entry, TDEE calculation from profile inputs, dashboard showing net calories. Prove the loop end-to-end before adding AI.
+- **Phase 0 — Scaffold**: monorepo, FastAPI skeleton with `/health`, Postgres + Redis via docker-compose, SwiftUI skeleton with stub TabView (Camera, Diary, Exercise, Dashboard, Profile), XcodeGen-generated project builds and runs on simulator, app can hit `/health` over localhost. No business logic yet.
+- **Phase 1 — Manual core loop** *(current)*: manual meal entry, manual exercise entry, TDEE calculation from profile inputs, dashboard showing net calories. Prove the loop end-to-end before adding AI.
 - **Phase 2 — Photo → macros**: `/meals/scan` endpoint, vision LLM integration, confirm/edit screen before saving to the diary.
 - **Phase 3 — Refinement**: nutrition-API cross-check for accuracy, portion-size estimation, streaks/history, charts.
 - **Phase 4 — Polish**: HealthKit sync (steps, active energy, workouts), push reminders, MET-based exercise calorie table.

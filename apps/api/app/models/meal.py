@@ -1,7 +1,9 @@
 import enum
 
+from typing import List
+
 from sqlalchemy import Integer, String, Float, DateTime, ForeignKey, Enum
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
 
@@ -19,6 +21,8 @@ class Meal(Base):
     logged_at: Mapped[DateTime] = mapped_column(DateTime, nullable=False)
     photo_url: Mapped[str] = mapped_column(String, nullable=True)
     source: Mapped[MealSource] = mapped_column(Enum(MealSource), nullable=False)
+
+    items: Mapped[List["MealItem"]] = relationship(cascade="all, delete-orphan")
 
 
 class MealItem(Base):
